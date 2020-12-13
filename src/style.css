@@ -1,0 +1,93 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+h2 {
+  color: #ffffff;
+  padding: 10px;
+  font-size: 15px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.app-border {
+  border: 1px solid #909aac;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  max-height: 800px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  opacity: 0.7;
+  background-image: url(../images/clouds.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.521);
+  border-radius: 20px;
+}
+
+#daily-card {
+  height: 200px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#weekly-card {
+  height: 200px;
+  padding: 10px;
+}
+
+.todays-numerical,
+.todays-date {
+  font-size: 30px;
+}
+
+.todays-temp {
+  font-size: 50px;
+}
+
+.weekdays {
+  color: #000000;
+  font-size: 17px;
+  display: block;
+  padding: 10px 0 25px 0;
+}
+
+.day {
+  display: block;
+}
+
+.fas.fa-cloud {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.fas.fa-cloud-sun-rain {
+  font-size: 25px;
+  color: #7ac9eb;
+}
+
+.fas.fa-sun {
+  color: #ffee00;
+  font-size: 25px;
+}
