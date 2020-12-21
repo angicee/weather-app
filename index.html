@@ -17,93 +17,94 @@
 
 <body>
     <div class="container">
-        <div class="app-border">
-            <form class="search-form" id="search-form">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off"
-                            id="city-input" class="form-control shadow-sm">
-                    </div>
-                    <div class="col-3">
-                        <input type="submit" alue="Search" class="form-control btn btn-primary shadow-sm w-100">
-                    </div>
-                    <div class="col-3">
-                        <button class="btn btn-success w-100" id="current-location-button">
-                            Current
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <h1 id="city">
-            </h1>
-            <h2 id="forecast">
-            </h2>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body align-items-center d-flex justify-content-center" id="daily-card">
-                            <p>
-                                <span class="todays-date">
-                                    Day
-                                </span>
-                                </br>
-                                <span class="todays-numerical">
-                                    Date
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body align-items-center d-flex justify-content-center" id="daily-card">
-                            <p>
-                                <span class="todays-temp">
-                                </span>
-                                <a href="#" class="celsius" id="change-temp">
-                                    °C
-                                </a>
-                                |
-                                <a href="#" class="fahrenheit" id="change-temp">
-                                    °F
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <div class="app-border">
+      	<form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off"
+                id="city-input" class="form-control shadow-sm">
+        		</div>
+            <div class="col-3">
+              <input type="submit" alue="Search" class="form-control btn btn-primary shadow-sm w-100">
             </div>
-            <br />
-            <div class="card text-center">
-                <div class="card-body" id="weekly-card">
-                    <p>
-                        <span class="weekdays">
-                            Today
-                            </br>
-                            November 8th - November 13th
-                        </span>
-                    </p>
-                    <div class="row">
-                        <div class="col">
-                            <span class="day">
-                                M
-                            </span>
-                            <br />
-                            <i class="fas fa-cloud-sun-rain"></i>
-                        </div>
-                        <div class="col">
-                            <span class="day">
-                                Tu
-                            </span>
-                            <br />
-                            <i class="fas fa-cloud-sun-rain"></i>
-                        </div>
-                        <div class="col">
-                            <span class="day">
-                                W
-                            </span>
-                            <br />
-                            <i class="fas fa-cloud"></i>
-                        </div>
+            <div class="col-3">
+              <button class="btn btn-success w-100" id="current-location-button">
+                Current
+              </button>
+      		</div>
+      </div>
+        </form>
+      <h1 id="city">
+      </h1>
+      <h2 id="forecast">
+      </h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body align-items-center d-flex justify-content-center" id="daily-card">
+              <p>
+                <span class="todays-date">
+                  Day
+                </span>
+                </br>
+                <span class="todays-numerical">
+                  Date
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body align-items-center d-flex justify-content-center" id="daily-card">
+							<img src="" alt="clear" id="icon" class="float-left"/>
+              <p>					
+                <span class="todays-temp">
+                </span>
+                  <a href="#" class="celsius" id="change-temp">
+                    °C
+                  </a>
+                    |
+                  <a href="#" class="fahrenheit" id="change-temp">
+                    °F
+                  </a>
+              </p>
+            </div>
+          </div>
+        </div>
+          </div>
+          <br />
+          <div class="card text-center">
+            <div class="card-body" id="weekly-card">
+              <p>
+                <span class="weekdays">
+                  Today
+                	<br />
+                  November 8th - November 13th
+                </span>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <span class="day">
+                    M
+                  </span>
+                    <br />
+                    <i class="fas fa-cloud-sun-rain"></i>
+                </div>
+                <div class="col">
+                  <span class="day">
+                    Tu
+                  </span>
+                  <br />
+                  <i class="fas fa-cloud-sun-rain"></i>
+                </div>
+                <div class="col">
+                  <span class="day">
+                    W
+                  </span>
+                  <br />
+                  <i class="fas fa-cloud"></i>
+								</div>
                         <div class="col">
                             <span class="day">
                                 Th

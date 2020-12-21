@@ -1,8 +1,13 @@
 function showTemperature(response) {
+  let iconElement = document.querySelector("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".todays-temp").innerHTML = Math.round(response.data.main.temp);
 
   document.querySelector("#forecast").innerHTML = response.data.weather[0].main;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function searchCity(city) {
@@ -65,6 +70,7 @@ let months = [
   "November",
   "December"
 ];
+
 let month = months[now.getMonth()];
 let day = days[now.getDay()];
 let weekday = document.querySelector(".todays-date");
