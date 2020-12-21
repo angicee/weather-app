@@ -32,7 +32,7 @@ p {
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
-  max-height: 800px;
+  max-height: 600px;
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   opacity: 0.7;
   background-image: url(../images/clouds.jpg);
@@ -48,13 +48,14 @@ p {
 
 #daily-card {
   height: 200px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
 #weekly-card {
-  height: 200px;
-  padding: 10px;
+  color: #000000;
+  font-size: 25px;
+  padding: 0px;
 }
 
 .todays-numerical,
@@ -64,32 +65,6 @@ p {
 
 .todays-temp {
   font-size: 30px;
-}
-
-.weekdays {
-  color: #000000;
-  font-size: 17px;
-  display: block;
-  padding: 10px 0 25px 0;
-}
-
-.day {
-  display: block;
-}
-
-.fas.fa-cloud {
-  color: #ffffff;
-  font-size: 25px;
-}
-
-.fas.fa-cloud-sun-rain {
-  font-size: 25px;
-  color: #7ac9eb;
-}
-
-.fas.fa-sun {
-  color: #ffee00;
-  font-size: 25px;
 }
 
 .code-button {

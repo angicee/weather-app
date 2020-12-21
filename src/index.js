@@ -2,12 +2,15 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".todays-temp").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#humidity").innerHTML = `${Math.round(response.data.main.humidity)}%`;
+  document.querySelector("#wind-speed").innerHTML = `${Math.round(response.data.wind.speed)}Km/H`;
 
   document.querySelector("#forecast").innerHTML = response.data.weather[0].main;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -39,14 +42,14 @@ function changeCTemp(event) {
   event.preventDefault();
   let celsiusTemp = document.querySelector(".celsius");
   let temperature = document.querySelector(".todays-temp");
-  temperature.innerHTML = " 16 ";
+  temperature.innerHTML = "#";
 }
 
 function changeFTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = document.querySelector(".fahrenheit");
   let temperature = document.querySelector(".todays-temp");
-  temperature.innerHTML = "";
+  temperature.innerHTML = "#";
 }
 
 let cityInput = document.querySelector("h1");
@@ -86,6 +89,7 @@ fahrenheitTemp.addEventListener("click", changeFTemp);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
 
 searchCity("San Francisco");
 
