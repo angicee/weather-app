@@ -1,5 +1,8 @@
 function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
+
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".todays-temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = `${Math.round(response.data.main.humidity)}%`;
@@ -40,17 +43,18 @@ function getCurrentLocation(event) {
 
 function changeCTemp(event) {
   event.preventDefault();
-  let celsiusTemp = document.querySelector(".celsius");
   let temperature = document.querySelector(".todays-temp");
-  temperature.innerHTML = "#";
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
 function changeFTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = document.querySelector(".fahrenheit");
   let temperature = document.querySelector(".todays-temp");
-  temperature.innerHTML = "#";
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+let celsiusTemperature = null;
 
 let cityInput = document.querySelector("h1");
 let cityForm = document.querySelector("#search-form");
@@ -81,17 +85,20 @@ let weekNumber = document.querySelector(".todays-numerical");
 weekday.innerHTML = `${day}`;
 weekNumber.innerHTML = `${month} ${now.getDate()}`;
 
-let celsiusTemp = document.querySelector(".celsius");
-let fahrenheitTemp = document.querySelector(".fahrenheit");
 let temperature = document.querySelector(".todays-temp");
-celsiusTemp.addEventListener("click", changeCTemp);
-fahrenheitTemp.addEventListener("click", changeFTemp);
+
+let celsiusLink = document.querySelector(".celsius");
+celsiusLink.addEventListener("click", changeCTemp);
+
+let fahrenheitLink = document.querySelector(".fahrenheit");
+fahrenheitLink.addEventListener("click", changeFTemp);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 
 searchCity("San Francisco");
+
 
 
 
